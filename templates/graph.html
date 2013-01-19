@@ -9,9 +9,9 @@
     <div class="content">
 
       <h1>Social graph of {{name}}</h1>
-      <canvas id="myCanvas" width="1280" height="800">Fallback content, in case the browser does not support Canvas.</canvas>
+      <canvas id="myCanvas">Fallback content, in case the browser does not support Canvas.</canvas>
       <pre></pre>
-      <h2>Zoom: </a><a href="{{prev}}">-</a> - <a href="{{next}}">+</a>
+      <h2>Expand: </a><a href="{{prev}}">-</a> - <a href="{{next}}">+</a>
 
     </div>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" type="text/javascript"></script>
@@ -28,6 +28,9 @@ $(function() {
     var context = canvas.getContext('2d');
     if (context) {
       $("pre").text(JSON.stringify(graphData, null, 1));
+
+      context.canvas.width  = window.innerWidth;
+      context.canvas.height = window.innerHeight-100;
 
       var graphData = {{graph_json|safe}}
 

@@ -1,3 +1,9 @@
+html, body {
+  width:  100%;
+  height: 100%;
+  margin: 0px;
+}
+
 body {
   background-color: #000019;
   background-image: url(../img/bg.gif);
@@ -12,6 +18,8 @@ body {
   font-weight:normal;
   line-height:1.333;
 }
+
+
 
 a {
   color:#EFEFEF;
@@ -28,7 +36,6 @@ a:visited {
 }
 
 div.content {
-  width: 1280px;
   margin-left: auto;
   margin-right: auto;
 }

@@ -117,6 +117,7 @@ def you_may_know(profileid):
 
   all_ids = set(contacts + favorites)
   known = set(all_ids)
+  known.add(profileid)
 
   found = set()
   print(all_ids)
